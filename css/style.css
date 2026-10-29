@@ -1,7 +1,7 @@
 :root{
     /* Colors */
-   --color--light-blue: hsl(234, 29%, 20%);
-   --color--dark-blue: hsl(235, 18%, 26%);
+   --color--dark-blue: hsl(234, 29%, 20%);
+   --color--light-blue: hsl(235, 18%, 26%);
    --color-grey: hsl(0, 0%,58%);
    --color-white: hsl(0, 0%, 100%);
    --color-red: hsl(4, 100%, 67%);
@@ -27,9 +27,94 @@ html {
 }
 
 body {
-  font-weight: 400;
-  line-height: 1.6;
-  border: 3px solid red;
+  font-weight: 500;
+  line-height: 1.4;
+  /* border: 3px solid red; */
   min-height: 100dvh;
+  font-family: var(--font-family);
+   color: var(--color--light-blue);
 }
 
+.signup__image{
+    /* border: 3px solid orange; */
+    display: block;
+    width: 100%;
+}
+
+.signup__body{
+    /* border: 3px solid red; */
+    padding: 2.5rem 2.2rem 3.5rem;
+}
+
+.signup__title{
+    font-size: 3.7rem;
+    font-weight: 700;
+    color: var(--color--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.signup__p {
+    font-size: 1.5rem;
+   margin-bottom: 1.7rem;
+}
+
+.signup__table{
+    /* border: 3px solid red; */
+    padding: .5rem;
+}
+
+.signup__table p{
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 400;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+     font-weight: 500;
+    /* border: 3px solid green; */
+}
+
+.signup__form{
+    /* border: 3px solid green; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.7rem;
+}
+
+.signup__form-group{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.signup__form-group  label{
+    color: var(--color--dark-blue);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+.signup__form-group input{
+    padding: 1.5rem;
+    outline: none;
+    border: 1px solid var(--color-grey);
+    border-radius: .8rem;
+}
+
+.signup__form-group input::placeholder {
+    color: var(--color-grey);
+    font-size: 1.5rem;
+}
+
+.btn{
+ outline: none;
+ padding: 2rem;
+ color: var(--color-white);
+ border: none;
+ border-radius: .8rem;
+ font-size: 1.5rem;
+ font-weight: 600;
+ background-color: var(--color--dark-blue);
+ opacity: .5rem;
+}
