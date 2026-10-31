@@ -29,20 +29,21 @@ html {
 body {
   font-weight: 500;
   line-height: 1.4;
-  /* border: 3px solid red; */
   min-height: 100dvh;
   font-family: var(--font-family);
    color: var(--color--light-blue);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
 .signup__image{
-    /* border: 3px solid orange; */
     display: block;
     width: 100%;
 }
 
 .signup__body{
-    /* border: 3px solid red; */
     padding: 2.5rem 2.2rem 3.5rem;
 }
 
@@ -59,7 +60,7 @@ body {
 }
 
 .signup__table{
-    /* border: 3px solid red; */
+
     padding: .5rem;
 }
 
@@ -71,11 +72,10 @@ body {
     margin-bottom: 1rem;
     font-size: 1.5rem;
      font-weight: 500;
-    /* border: 3px solid green; */
 }
 
 .signup__form{
-    /* border: 3px solid green; */
+
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -94,7 +94,6 @@ body {
     font-weight: bold;
 }
 
-
 .signup__form-group input{
     padding: 1.5rem;
     outline: none;
@@ -111,10 +110,57 @@ body {
  outline: none;
  padding: 2rem;
  color: var(--color-white);
- border: none;
+ border: none;g
  border-radius: .8rem;
  font-size: 1.5rem;
  font-weight: 600;
  background-color: var(--color--dark-blue);
- opacity: .5rem;
+}
+
+.success-message{  
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10rem 2rem 4rem;  
+    display: none;
+}
+
+.success-message__header{
+    font-size: 4rem;
+    line-height: 1;
+    margin: 2rem 0;
+    color: var(--color--dark-blue);
+}
+
+.success-message__note{
+    font-size: 1.5rem;
+}
+
+.success-message__note span{
+    font-weight: bold;
+    color: var(--color--dark-blue);
+}
+
+.add{
+    max-width: 38rem;
+    border-radius: 3rem;
+    background-color: var(--color-white);
+    background-color: var(--color-white);
+    min-height: auto;
+    padding: 3.5rem 4rem 5rem;
+}
+
+.add .success__img{
+    width: 5rem;
+}
+
+.add .success-message__note{
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+}
+
+.add .success-btn{
+    padding: 1.5rem;
+    font-size: 1.3rem;
 }
