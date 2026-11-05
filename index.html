@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
+
+  <script defer src="script.js"></script>
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
@@ -38,27 +40,32 @@
        <p><span><img src="/assets/images/icon-list.svg"></span>  And much more!</p>
     </div>
 
-    <form class="signup__form">
+    <form class="signup__form" novalidate>
+   
       <div class="signup__form-group">
-         <label for="email">Email address</label>
-        <input name="email" type="email" id="email" placeholder="email@company.com">
+        <div class="form-label">
+          <label for="email">Email address</label>
+          <p class="error-message"></p>
+        </div>
+         
+        <input name="email" type="email" id="email" required minlength="5" maxlength="254" placeholder="email@company.com">
       </div>
        
       <button type="submit" class="btn signup__btn">Subscribe to monthly newsletter</button>
     </form>
 
+  
+  </div>
 
   <div class="success-message">
-    <div class="success-message__wrapper">
-        <img src="/assets/images/icon-success.svg" class="success__img" alt="">
-        <h2 class="success-message__header">Thanks for subscribing!</h2>
-        <p class="success-message__note"> A confirmation email has been sent to <span>ash@loremcompany.com.</span>
-          Please open it and click the button inside to confirm your subscription.
-        </p>
-    </div>
+     <div class="success-message__wrapper">
+          <img src="/assets/images/icon-success.svg" class="success__img" alt="">
+          <h2 class="success-message__header">Thanks for subscribing!</h2>
+          <p class="success-message__note"> A confirmation email has been sent to <span>ash@loremcompany.com.</span>. Please open it and click the button inside to confirm your subscription.
+          </p>
+      </div>
    
-     <button type="submit" class="btn success-btn">Dismiss message</button>
-  </div>
+     <button type="button" class="btn  dismiss-btn">Dismiss message</button>
   </div>
 </main>
 
