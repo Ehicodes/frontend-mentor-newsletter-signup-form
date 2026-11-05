@@ -59,9 +59,7 @@ body {
        border-radius: 2rem;
        padding: 1rem 2rem;
        
-       /* .signup.is-success .success-message {
-          grid-column: 1 / -1;
-       } */
+     
     }
 }
 
@@ -239,14 +237,15 @@ body {
 }
 
 @media (min-width: 64em) {
-  .success-message.is-visible.add {
+  .success-message.is-visible {
         max-width: 38rem;
         border-radius: 3rem;
         background-color: var(--color-white);
         min-height: auto;
         padding: 3.5rem 4rem 5rem;
+         grid-column: 1 / -1;
 
-     .success__img{
+    .success__img{
         width: 5rem;
     }
 

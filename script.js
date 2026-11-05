@@ -40,7 +40,7 @@ form.addEventListener('submit', (e) =>{
     const hasConsecutiveDots = /\.{2,}/.test(email);
 
     if (hasInvalidCharacters || hasConsecutiveDots) {
-          errorMessage.textContent = 'Please enter a valid email address.'
+          errorMessage.textContent = 'Enter a valid email address.'
           return;     
       }
      
