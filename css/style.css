@@ -45,7 +45,6 @@ body {
      @media (min-width: 64em) {
         background-color: var(--color--light-blue);
      }
-
 }
 
 .signup{
@@ -58,8 +57,6 @@ body {
        gap: 2rem;
        border-radius: 2rem;
        padding: 1rem 2rem;
-       
-     
     }
 }
 

@@ -1,22 +1,28 @@
-# Frontend Mentor - Newsletter sign-up form with success message
+# Frontend Mentor - Newsletter sign-up form with success message solution
 
-![Design preview for the Newsletter sign-up form with success message coding challenge](./preview.jpg)
+This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this newsletter form and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - Add their email and submit the form
 - See a success message with their email after successfully submitting the form
@@ -26,87 +32,104 @@ Your users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-### Want some support on the challenge? 
+### Screenshot
 
-[Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+**Desktop sign-up form**
 
-## Where to find everything
+![Newsletter sign-up form on desktop](./screenshots/Desktop%20design.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+**Desktop validation and success states**
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+![Desktop error state](./screenshots/Error%20state-desktop.png)
+![Desktop success message](./screenshots/Success%20state-desktop.png)
 
-If you would like the Figma design file to gain experience using professional tools and build more accurate projects faster, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+**Mobile layout**
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+![Newsletter sign-up form on mobile](./screenshots/Mobile%20design.png)
+![Mobile success message](./screenshots/Success%20state-mobile.png)
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+### Links
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-## Using AI coding assistants
+## My process
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+### Built with
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- JavaScript
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+### What I learned
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+Working on this project helped me strengthen my understanding of HTML, CSS, and JavaScript, particularly how they work together to create an interactive user experience. Some of the major things I learned include:
 
-## Building your project
+- **HTML structure:** Understanding the importance of proper nesting and parent-child relationships. I discovered that placing an element inside the wrong container can affect how it behaves when styling or manipulating it with JavaScript.
+- **Responsive design:** Using CSS Grid, Flexbox, media queries, and the HTML `<picture>` element to create layouts that adapt to different screen sizes.
+- **Form validation:** Learning how to validate user input with JavaScript, including checking for empty fields, invalid email formats, whitespace, and consecutive dots.
+- **Regular expressions:** Using regular expressions (`RegEx`) to detect specific patterns in an email address.
+- **DOM manipulation:** Selecting HTML elements, updating text content, and using `classList.add()` and `classList.remove()` to control different UI states.
+- **Event handling:** Working with form submission events, `e.preventDefault()`, and event listeners to manage user interactions.
+- **Debugging:** Learning to inspect my HTML structure, CSS styles, and JavaScript behaviour instead of assuming every issue is caused by CSS or JavaScript.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+One concept I particularly enjoyed learning was how to use JavaScript to display a success message after successful form validation:
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+```js
+successEmail.textContent = email;
+successMessage.classList.add('is-visible');
+signup.classList.add('is-success');
+```
 
-## Deploying your project
+This updates the email address displayed in the success message and changes the interface to reflect a successful subscription.
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+### Continued development
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+I want to continue improving my JavaScript skills, especially in the following areas:
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://www.frontendmentor.io/guides/hosting-your-solution).
+- Writing cleaner, more reusable JavaScript code.
+- Getting more comfortable with regular expressions and form validation.
+- Understanding accessibility best practices, particularly for forms and error messages.
+- Improving my CSS layout skills and responsive design techniques.
+- Becoming more confident with debugging and solving problems independently.
+- Learning how to provide better feedback to users through interactive interfaces.
 
-## Create a custom `README.md`
+I also want to keep building projects that challenge me to apply what I've learned rather than simply following tutorials.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+### Useful resources
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+- [MDN Web Docs – HTML Forms](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms) - Helped me understand HTML forms and how they work.
+- [MDN Web Docs – Constraint Validation](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation) - A useful resource for understanding form validation and the browser's built-in validation features.
+- [MDN Web Docs – Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions) - Helped me understand how regular expressions work in JavaScript.
+- [Frontend Mentor](https://www.frontendmentor.io/) - Provided the challenge and design reference that helped me practise building a real-world interface.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+### AI Collaboration
 
-## Submitting your solution
+I used ChatGPT as a learning and debugging companion throughout this project.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://www.frontendmentor.io/guides/how-to-submit-solutions) for tips on how to do this.
+Rather than relying on AI to write the entire solution, I used it to:
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+- Understand unfamiliar HTML, CSS, and JavaScript concepts.
+- Break down JavaScript logic and regular expressions into simpler explanations.
+- Debug issues with form validation, DOM manipulation, and CSS layouts.
+- Understand why certain approaches worked and why others didn't.
+- Explore alternative ways to structure and improve my code.
 
-## Sharing your solution
+One important lesson from this experience was that not every problem requires a complicated solution. For example, I spent time investigating CSS and JavaScript when the actual issue was my HTML structure: I had placed the success message inside the signup body, which was being hidden when the success state was activated.
 
-There are multiple places you can share your solution:
+This experience reinforced the importance of understanding my code, testing my assumptions, and learning to debug independently.
 
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community). 
-2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+Overall, AI was most useful when it helped me understand the reasoning behind a solution rather than simply giving me code to copy.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+## Author
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+- Github - [Ehicodes](https://github.com/Ehicodes)
+- Frontend Mentor - [@Ehicodes](https://www.frontendmentor.io/profile/@Ehicodes)
+- X - [@Ehinomen_01](https://x.com/Ehinomen_01)
 
-## Got feedback for us?
+## Acknowledgments
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+Thanks to Frontend Mentor for the challenge and design.

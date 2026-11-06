@@ -2,11 +2,11 @@
 const signup = document.querySelector('.signup')
 const form = document.querySelector('.signup__form') 
 const  emailInput = document.querySelector('#email')
+const errorMessage = document.querySelector('.error-message')
 const successMessage = document.querySelector('.success-message')
 const successEmail = document.querySelector('.success-message__note span')
-const errorMessage = document.querySelector('.error-message')
-const dismissBtn = document.querySelector('.dismiss-btn')
 const submitBtn = document.querySelector('.signup__btn')
+const dismissBtn = document.querySelector('.dismiss-btn')
 
 form.addEventListener('submit', (e) =>{
     e.preventDefault()
@@ -21,28 +21,26 @@ form.addEventListener('submit', (e) =>{
          return
     }
 
-
   // 2. Basic email structure
     if(!emailInput.checkValidity()) {
-         errorMessage.textContent = 'Valid email required'
-         emailInput.style.backgroundColor = '#fbe2e2'
-         emailInput.style.border = '1px solid #eb7c7c'
-         emailInput.style.border = '1px solid #eb7c7c'
-         emailInput.style.color = '#ff8989'
+         errorMessage.textContent = 'Email required'
          return
-    } else emailInput.style.backgroundColor = '#fff',  
-           emailInput.style.border = '1px solid #949494',
-           emailInput.style.color = '#36384e'
+    }  
 
-    
       // 3. Character and space restrictions
     const hasInvalidCharacters = /\s/.test(email);
     const hasConsecutiveDots = /\.{2,}/.test(email);
 
     if (hasInvalidCharacters || hasConsecutiveDots) {
-          errorMessage.textContent = 'Enter a valid email address.'
-          return;     
-      }
+          errorMessage.textContent = 'Valid email required.'
+         emailInput.style.backgroundColor = '#fbe2e2'
+         emailInput.style.border = '1px solid #eb7c7c'
+         emailInput.style.border = '1px solid #eb7c7c'
+         emailInput.style.color = '#ff8989'
+         return 
+      }  else emailInput.style.backgroundColor = '#fff',  
+           emailInput.style.border = '1px solid #949494',
+           emailInput.style.color = '#36384e'
      
       //4. Display the entered email
        successEmail.textContent = email;
