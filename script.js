@@ -5,7 +5,6 @@ const  emailInput = document.querySelector('#email')
 const errorMessage = document.querySelector('.error-message')
 const successMessage = document.querySelector('.success-message')
 const successEmail = document.querySelector('.success-message__note span')
-const submitBtn = document.querySelector('.signup__btn')
 const dismissBtn = document.querySelector('.dismiss-btn')
 
 form.addEventListener('submit', (e) =>{
