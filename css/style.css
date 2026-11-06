@@ -8,7 +8,7 @@
    --color-pink: hsl(340, 79%, 58%);
    --color-orange: hsl(8, 86%, 57%);
    --error-color: #ff8989;
-
+   --box-shadow:  0 1.2rem 2.4rem rgba(240, 75, 50, 0.25);
    /* Font-family */
     --font-family: "Roboto", sans-serif;
 }
@@ -196,7 +196,7 @@ body {
         color: white;
         border: none;
         transform: translateY(-2px);
-        box-shadow: 0 1.2rem 2.4rem rgba(240, 75, 50, 0.25);
+        box-shadow: var(--box-shadow);
         background: linear-gradient(to right, var(--color-pink), var(--color-orange));
     }
 }
