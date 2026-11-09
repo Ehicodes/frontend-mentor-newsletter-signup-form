@@ -1,14 +1,16 @@
 :root{
     /* Colors */
    --color--dark-blue: hsl(234, 29%, 20%);
-   --color--light-blue: hsl(235, 18%, 26%);
-   --color-grey: hsl(0, 0%,58%);
+   --color--light-blue: #36384e;
+   --color-grey: #949494;
    --color-white: hsl(0, 0%, 100%);
    --color-red: hsl(4, 100%, 67%);
    --color-pink: hsl(340, 79%, 58%);
    --color-orange: hsl(8, 86%, 57%);
    --error-color: #ff8989;
    --box-shadow:  0 1.2rem 2.4rem rgba(240, 75, 50, 0.25);
+   --error-border-color:  #eb7c7c;
+   --error-background-color:  #fbe2e2;
    /* Font-family */
     --font-family: "Roboto", sans-serif;
 }
@@ -146,7 +148,7 @@ body {
     font-weight: bold;
 }
 
-.signup__form-group input{
+input{
     padding: 1.5rem;
     outline: none;
     border: 1px solid var(--color-grey);
@@ -157,13 +159,19 @@ body {
      }
 }
 
-.signup__form-group input:active{
+input:active{
     border: 1px solid var(--color--dark-blue);
 }
 
-.signup__form-group input::placeholder {
+input::placeholder {
     color: var(--color-grey);
     font-size: 1.5rem;
+}
+
+.input-error{
+    border: 1px solid var(--error-border-color);
+    color: var(--error-color);
+    background-color: var(--error-background-color);
 }
 
 .btn{

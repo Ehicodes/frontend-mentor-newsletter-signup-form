@@ -12,18 +12,18 @@ form.addEventListener('submit', (e) =>{
 
     const email = emailInput.value.trim()
 
-    errorMessage.textContent = ''
+    clearEmailError()
 
       // 1. Presence check
     if(!email) {
-        errorMessage.textContent = 'Email address is required.'
-         return
+        showErrorMessage('Email is required') 
+        return
     }
 
   // 2. Basic email structure
     if(!emailInput.checkValidity()) {
-         errorMessage.textContent = 'Email required'
-         return
+        showErrorMessage('Valid Email required')
+          return
     }  
 
       // 3. Character and space restrictions
@@ -31,16 +31,10 @@ form.addEventListener('submit', (e) =>{
     const hasConsecutiveDots = /\.{2,}/.test(email);
 
     if (hasInvalidCharacters || hasConsecutiveDots) {
-          errorMessage.textContent = 'Valid email required.'
-         emailInput.style.backgroundColor = '#fbe2e2'
-         emailInput.style.border = '1px solid #eb7c7c'
-         emailInput.style.border = '1px solid #eb7c7c'
-         emailInput.style.color = '#ff8989'
+         showErrorMessage('Invalid Email address')
          return 
-      }  else emailInput.style.backgroundColor = '#fff',  
-           emailInput.style.border = '1px solid #949494',
-           emailInput.style.color = '#36384e'
-     
+      } 
+          
       //4. Display the entered email
        successEmail.textContent = email;
 
@@ -48,8 +42,10 @@ form.addEventListener('submit', (e) =>{
         successMessage.classList.add('is-visible')
 
       // 6. Show normal signup screen
-        signup.classList.add('is-success') 
+        signup.classList.add('is-success')     
 })
+
+
 
 //Listen for the dismiss button click
 dismissBtn.addEventListener('click', function() {
@@ -62,8 +58,19 @@ dismissBtn.addEventListener('click', function() {
      //Clear the form
      form.reset()
 
-  // Clear previous errors
-  errorMessage.textContent = '';
+  // Clear previous errors /restore normal ui
+   clearEmailError()
 })
 
+function clearEmailError() {
+   errorMessage.textContent = ''
+   emailInput.classList.remove('input-error')
+}
 
+function showErrorMessage(message) {
+  errorMessage.textContent = message
+  emailInput.classList.add('input-error')
+}
+
+
+console.log(emailInput.value)
